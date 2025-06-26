@@ -1,107 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Artesanalmente</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- 🟢 Barra promocional superior -->
-  <div class="promo-bar">
-    <p>💚 15% de descuento en tu primera compra &nbsp; <a href="#">Regístrate</a></p>
-  </div>
-
-  <!-- 🧭 Encabezado principal -->
-  <header class="main-header">
-    <div class="container">
-      <div class="logo">
-        <img src="https://via.placeholder.com/40x40" alt="Logo Artesanalmente">
-        <span>Artesanalmente</span>
-      </div>
-      <nav class="navbar">
-        <a href="#productos">Productos</a>
-        <a href="#pedidos">Pedidos Especiales</a>
+  <header>
+    <div class="top-bar">15% de descuento en la primera compra - <a href="#">Regístrate</a></div>
+    <div class="logo-bar">
+      <img src="img/logo.svg" alt="Logo Artesanalmente" class="logo" />
+      <nav>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#pedido">Pedidos Especiales</a>
         <a href="#">Ofertas</a>
         <a href="#">Cuidado</a>
       </nav>
-      <div class="icons">
-        <button class="icon-btn">🔍</button>
-        <button class="icon-btn">❤️</button>
-        <button class="icon-btn">🛒 <span class="cart-count">0</span></button>
-      </div>
     </div>
   </header>
 
-  <!-- 🎯 Hero principal -->
   <section class="hero">
-    <div class="hero-content">
+    <div class="hero-overlay">
       <h1>Bienvenido a Artesanalmente</h1>
       <p>Descubre nuestra exclusiva colección de artículos minimalistas y muebles de madera hechos a mano para complementar tu espacio</p>
-      <a href="#productos" class="hero-btn">Ver Colección</a>
+      <a href="#catalogo" class="boton">Ver colección</a>
     </div>
   </section>
-<section id="recien-llegados" class="catalogo-seccion">
-  <h2>Recién Llegados</h2>
-  <div class="productos-grid">
-    <div class="producto-card">
-      <span class="etiqueta">Recién llegado</span>
-      <img src="https://i.imgur.com/z1hkRzZ.png" alt="Ficus lyrata">
-      <h3>Ficus lyrata</h3>
-      <p class="precio">$699.99</p>
-      <button>Agregar al carrito</button>
-    </div>
-    <div class="producto-card">
-      <span class="etiqueta">Recién llegado</span>
-      <img src="https://i.imgur.com/k5CM9Ha.png" alt="Maceta oxidada">
-      <h3>Maceta oxidada</h3>
-      <p class="precio">$399.99</p>
-      <button>Agregar al carrito</button>
-    </div>
-    <div class="producto-card">
-      <span class="etiqueta">Recién llegado</span>
-      <img src="https://i.imgur.com/qlsnkqj.png" alt="Cactus">
-      <h3>Cactus</h3>
-      <p class="precio">$399.99</p>
-      <button>Agregar al carrito</button>
-    </div>
-    <div class="producto-card">
-      <span class="etiqueta">Recién llegado</span>
-      <img src="https://i.imgur.com/dZZS5kx.png" alt="Cesto de madera">
-      <h3>Cesto de madera</h3>
-      <p class="precio">$559.99</p>
-      <button>Agregar al carrito</button>
-    </div>
-  </div>
-</section>
 
-
-  <!-- 🛍️ Productos -->
   <main>
-    <section id="productos" class="productos">
+    <section id="catalogo" class="productos">
       <h2>Catálogo</h2>
       <div class="galeria">
-        <div class="item"><img src="https://via.placeholder.com/200" alt="Producto"><p>Producto 1</p></div>
-        <div class="item"><img src="https://via.placeholder.com/200" alt="Producto"><p>Producto 2</p></div>
-        <div class="item"><img src="https://via.placeholder.com/200" alt="Producto"><p>Producto 3</p></div>
+        <div class="item">
+          <span class="badge">Recién llegado</span>
+          <img src="img/ficus.png" alt="Ficus lyrata" />
+          <h4>Ficus lyrata</h4>
+          <p>$699.99</p>
+          <button>Agregar al carrito</button>
+        </div>
+        <div class="item">
+          <span class="badge">Recién llegado</span>
+          <img src="img/maceta.png" alt="Maceta oxidada" />
+          <h4>Maceta oxidada</h4>
+          <p>$399.99</p>
+          <button>Agregar al carrito</button>
+        </div>
+        <div class="item">
+          <span class="badge">Recién llegado</span>
+          <img src="img/cactus.png" alt="Cactus" />
+          <h4>Cactus</h4>
+          <p>$399.99</p>
+          <button>Agregar al carrito</button>
+        </div>
+        <div class="item">
+          <span class="badge">Recién llegado</span>
+          <img src="img/cesto.png" alt="Cesto de madera" />
+          <h4>Cesto de madera</h4>
+          <p>$559.99</p>
+          <button>Agregar al carrito</button>
+        </div>
       </div>
     </section>
 
-    <!-- 📦 Formulario de pedidos -->
-    <section id="pedidos" class="formulario">
-      <h2>Haz tu pedido especial</h2>
+    <section id="pedido" class="formulario">
+      <h2>Pedidos Especiales</h2>
+      <p>¿Tienes una idea única? Podemos crearla para ti. Llena el formulario y nuestro equipo se pondrá en contacto.</p>
       <form id="pedidoForm">
-        <input type="text" placeholder="Nombre" required>
-        <input type="email" placeholder="Correo electrónico" required>
-        <textarea placeholder="Describe tu idea..." required></textarea>
-        <button type="submit">Enviar pedido</button>
+        <input type="text" placeholder="Tu nombre completo" required />
+        <input type="email" placeholder="Correo electrónico" required />
+        <textarea placeholder="Describe tu pedido especial..." required></textarea>
+        <button type="submit">Enviar solicitud</button>
       </form>
       <p id="mensajeEnviado"></p>
     </section>
   </main>
 
-  <!-- 📩 Footer -->
   <footer>
     <p>&copy; 2025 Artesanalmente. Todos los derechos reservados.</p>
   </footer>
@@ -109,4 +83,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
