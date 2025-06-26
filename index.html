@@ -7,22 +7,46 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Artesanalmente</h1>
-    <nav>
-      <a href="#productos">Productos</a>
-      <a href="#pedidos">Pedidos Especiales</a>
-    </nav>
+
+  <!-- 🟢 Barra promocional superior -->
+  <div class="promo-bar">
+    <p>💚 15% de descuento en tu primera compra &nbsp; <a href="#">Regístrate</a></p>
+  </div>
+
+  <!-- 🧭 Encabezado principal -->
+  <header class="main-header">
+    <div class="container">
+      <div class="logo">
+        <img src="https://via.placeholder.com/40x40" alt="Logo Artesanalmente">
+        <span>Artesanalmente</span>
+      </div>
+      <nav class="navbar">
+        <a href="#productos">Productos</a>
+        <a href="#pedidos">Pedidos Especiales</a>
+        <a href="#">Ofertas</a>
+        <a href="#">Cuidado</a>
+      </nav>
+      <div class="icons">
+        <button class="icon-btn">🔍</button>
+        <button class="icon-btn">❤️</button>
+        <button class="icon-btn">🛒 <span class="cart-count">0</span></button>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <h2>Prototipos en madera únicos y llamativos</h2>
-      <p>Hechos con pasión y dedicación. Elige el tuyo o haz tu pedido especial.</p>
-    </section>
+  <!-- 🎯 Hero principal -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Bienvenido a Artesanalmente</h1>
+      <p>Descubre nuestra exclusiva colección de artículos minimalistas y muebles de madera hechos a mano para complementar tu espacio</p>
+      <a href="#productos" class="hero-btn">Ver Colección</a>
+    </div>
+  </section>
 
+  <!-- 🛍️ Productos -->
+  <main>
     <section id="productos" class="productos">
-      <h3>Catálogo</h3>
+      <h2>Catálogo</h2>
       <div class="galeria">
         <div class="item"><img src="https://via.placeholder.com/200" alt="Producto"><p>Producto 1</p></div>
         <div class="item"><img src="https://via.placeholder.com/200" alt="Producto"><p>Producto 2</p></div>
@@ -30,8 +54,9 @@
       </div>
     </section>
 
+    <!-- 📦 Formulario de pedidos -->
     <section id="pedidos" class="formulario">
-      <h3>Haz tu pedido especial</h3>
+      <h2>Haz tu pedido especial</h2>
       <form id="pedidoForm">
         <input type="text" placeholder="Nombre" required>
         <input type="email" placeholder="Correo electrónico" required>
@@ -42,6 +67,7 @@
     </section>
   </main>
 
+  <!-- 📩 Footer -->
   <footer>
     <p>&copy; 2025 Artesanalmente. Todos los derechos reservados.</p>
   </footer>
@@ -49,3 +75,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
