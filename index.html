@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artesanalmente</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Artesanalmente</h1>
+    <nav>
+      <a href="#productos">Productos</a>
+      <a href="#pedidos">Pedidos Especiales</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Prototipos en madera únicos y llamativos</h2>
+      <p>Hechos con pasión y dedicación. Elige el tuyo o haz tu pedido especial.</p>
+    </section>
+
+    <section id="productos" class="productos">
+      <h3>Catálogo</h3>
+      <div class="galeria">
+        <div class="item"><img src="https://via.placeholder.com/200" alt="Producto"><p>Producto 1</p></div>
+        <div class="item"><img src="https://via.placeholder.com/200" alt="Producto"><p>Producto 2</p></div>
+        <div class="item"><img src="https://via.placeholder.com/200" alt="Producto"><p>Producto 3</p></div>
+      </div>
+    </section>
+
+    <section id="pedidos" class="formulario">
+      <h3>Haz tu pedido especial</h3>
+      <form id="pedidoForm">
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Correo electrónico" required>
+        <textarea placeholder="Describe tu idea..." required></textarea>
+        <button type="submit">Enviar pedido</button>
+      </form>
+      <p id="mensajeEnviado"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Artesanalmente. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
