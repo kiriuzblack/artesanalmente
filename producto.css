@@ -1,0 +1,100 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #FAF9F6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background: #A07949;
+  padding: 1rem 2rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+.back-button {
+  background-color: #fff;
+  color: #6C7A4F;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #eee;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.producto {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.producto img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+.detalles {
+  flex: 1;
+}
+
+.detalles h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+.detalles p {
+  font-size: 1rem;
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+
+.precio {
+  font-size: 1.2rem;
+  color: #4D7022;
+  font-weight: bold;
+}
+
+input[type="number"] {
+  width: 60px;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button.agregar-carrito {
+  background-color: #6C7A4F;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button.agregar-carrito:hover {
+  background-color: #556B2F;
+}

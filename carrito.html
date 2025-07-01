@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras | Artesanalmente</title>
+  <link rel="stylesheet" href="producto.css"> <!-- Reutilizamos estilos -->
+  <script defer src="carrito.js"></script>
+</head>
+<body>
+  <header>
+    <a href="catalogo.html" class="back-button">← Volver al catálogo</a>
+  </header>
+
+  <main class="producto-container">
+    <h1>Tu Carrito</h1>
+    <div id="contenedorCarrito" class="carrito-lista"></div>
+    
+    <div class="resumen">
+      <p><strong>Total: </strong><span id="totalCarrito">$0 COP</span></p>
+      <button id="finalizarCompra" class="agregar-carrito">Finalizar Compra</button>
+    </div>
+  </main>
+</body>
+</html>
