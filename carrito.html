@@ -3,23 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carrito de Compras | Artesanalmente</title>
-  <link rel="stylesheet" href="producto.css"> <!-- Reutilizamos estilos -->
-  <script defer src="carrito.js"></script>
+  <title>Catálogo Artesanalmente</title>
+  <link rel="stylesheet" href="catalogo.css">
 </head>
 <body>
   <header>
-    <a href="catalogo.html" class="back-button">← Volver al catálogo</a>
+    <nav>
+      <h1>Catálogo Artesanalmente</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#" id="mostrarUtilitarios" class="activo">Utilitarios</a></li>
+        <li><a href="#" id="mostrarDecorativos">Decorativos</a></li>
+        <li><a href="carrito.html">Carrito 🛒</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main class="producto-container">
-    <h1>Tu Carrito</h1>
-    <div id="contenedorCarrito" class="carrito-lista"></div>
-    
-    <div class="resumen">
-      <p><strong>Total: </strong><span id="totalCarrito">$0 COP</span></p>
-      <button id="finalizarCompra" class="agregar-carrito">Finalizar Compra</button>
-    </div>
+  <main>
+    <section id="utilitarios" class="seccion-productos"></section>
+    <section id="decorativos" class="seccion-productos oculto"></section>
   </main>
+
+  <footer>
+    <p>© 2025 Artesanalmente. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="catalogo.js"></script>
 </body>
 </html>

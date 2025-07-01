@@ -1,4 +1,5 @@
-// Lista de productos (puede crecer dinámicamente)
+// producto.js
+
 const productos = [
   {
     id: "1",
@@ -30,42 +31,33 @@ const productos = [
   }
 ];
 
-// Obtener ID desde la URL
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 const producto = productos.find(p => p.id === id);
 
-// Mostrar en el HTML si existe
 if (producto) {
   document.getElementById("imagenProducto").src = producto.imagen;
   document.getElementById("imagenProducto").alt = producto.nombre;
   document.getElementById("nombreProducto").textContent = producto.nombre;
   document.getElementById("precioProducto").textContent = `$${producto.precio.toLocaleString()} COP`;
   document.getElementById("descripcionProducto").textContent = producto.descripcion;
-
-  document.querySelector(".agregar-carrito").addEventListener("click", () => {
-    const cantidad = parseInt(document.getElementById("cantidad").value);
-    if (isNaN(cantidad) || cantidad <= 0) return;
-
-    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-    const existe = carrito.find(p => p.id === producto.id);
-
-    if (existe) {
-      existe.cantidad += cantidad;
-    } else {
-      carrito.push({
-        id: producto.id,
-        nombre: producto.nombre,
-        precio: producto.precio,
-        imagen: producto.imagen,
-        cantidad: cantidad
-      });
-    }
-
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-    alert("Producto agregado al carrito.");
-  });
-
 } else {
   document.querySelector("main").innerHTML = `<p style='text-align:center'>Producto no encontrado.</p>`;
-} 
+}
+
+function agregarAlCarrito() {
+  const cantidad = parseInt(document.getElementById("cantidad").value);
+  if (!cantidad || cantidad <= 0) return;
+
+  const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  const index = carrito.findIndex(item => item.id === producto.id);
+
+  if (index >= 0) {
+    carrito[index].cantidad += cantidad;
+  } else {
+    carrito.push({ ...producto, cantidad });
+  }
+
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+  alert("Producto añadido al carrito.");
+}

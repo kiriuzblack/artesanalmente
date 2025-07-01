@@ -1,7 +1,7 @@
 body {
-  margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #f9f7f3;
+  margin: 0;
+  background-color: #faf9f6;
   color: #333;
 }
 
@@ -9,69 +9,84 @@ header {
   background: #d6b78a;
   padding: 1rem;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2rem;
 }
 
 nav {
-  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-nav a {
-  margin: 0 1rem;
-  text-decoration: none;
+nav h1 {
+  font-size: 1.8rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a,
+.nav-links button {
+  background: none;
+  border: none;
   color: #333;
   font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.3s;
 }
 
-.categoria {
+.nav-links a:hover,
+.nav-links button:hover {
+  background: #f2ede3;
+}
+
+.nav-links .activo {
+  background: #6c7a4f;
+  color: white;
+}
+
+.seccion-productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
   padding: 2rem;
 }
 
-.categoria h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  padding: 0 1rem;
-}
-
 .producto {
-  background: #fff;
-  padding: 1rem;
+  background: white;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  padding: 1rem;
+  width: 220px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
   text-align: center;
-  transition: transform 0.3s ease;
 }
 
 .producto:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
 .producto img {
   max-width: 100%;
-  height: auto;
-  border-radius: 4px;
+  border-radius: 6px;
   margin-bottom: 0.5rem;
-}
-
-.producto h3 {
-  margin: 0.5rem 0;
-  font-size: 1.1rem;
-}
-
-.producto p {
-  font-weight: bold;
-  color: #6c7a4f;
 }
 
 footer {
@@ -82,15 +97,6 @@ footer {
   margin-top: 2rem;
 }
 
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s ease forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: none;
-  }
+.oculto {
+  display: none;
 }

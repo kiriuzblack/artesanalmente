@@ -14,7 +14,7 @@ function cargarCarrito() {
     return;
   }
 
-  carrito.forEach(producto => {
+  carrito.forEach((producto, index) => {
     const div = document.createElement("div");
     div.classList.add("producto");
 
@@ -25,6 +25,7 @@ function cargarCarrito() {
         <p>Precio unitario: $${producto.precio.toLocaleString()} COP</p>
         <p>Cantidad: ${producto.cantidad}</p>
         <p>Total: $${(producto.precio * producto.cantidad).toLocaleString()} COP</p>
+        <button onclick="eliminarProducto(${index})">Eliminar</button>
       </div>
     `;
 
@@ -35,7 +36,13 @@ function cargarCarrito() {
   total.textContent = `$${totalPrecio.toLocaleString()} COP`;
 }
 
-// Simular compra
+function eliminarProducto(indice) {
+  const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  carrito.splice(indice, 1);
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+  cargarCarrito();
+}
+
 function finalizarCompra() {
   alert("Gracias por tu compra. Nos pondremos en contacto contigo por correo electrónico.");
   localStorage.removeItem("carrito");
