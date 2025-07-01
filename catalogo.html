@@ -11,31 +11,33 @@
   <header>
     <h1>Catálogo Artesanalmente</h1>
     <nav>
-      <a href="#utilitarios">Utilitarios</a>
-      <a href="#decorativos">Decorativos</a>
+      <a href="index.html">Inicio</a>
+      <a href="#" onclick="mostrarCategoria('utilitarios')">Utilitarios</a>
+      <a href="#" onclick="mostrarCategoria('decorativos')">Decorativos</a>
+      <a href="carrito.html">🛒 Carrito</a>
     </nav>
   </header>
 
   <main>
-    <section id="utilitarios" class="categoria">
+    <section id="utilitarios" class="categoria activa">
       <h2>Utilitarios en Madera</h2>
-      <div class="grid">
-        <div class="producto fade-in">
+      <div class="fila-productos">
+        <div class="producto" onclick="irADetalle('1')">
           <h3>Soporte para Celular</h3>
           <img src="img/soporte_celular.jpg" alt="Soporte para celular">
           <p>$25.000 COP</p>
         </div>
-        <div class="producto fade-in">
+        <div class="producto" onclick="irADetalle('2')">
           <h3>Organizador de Escritorio</h3>
           <img src="img/organizador_escritorio.jpg" alt="Organizador">
           <p>$32.000 COP</p>
         </div>
-        <div class="producto fade-in">
+        <div class="producto">
           <h3>Portavasos Grabado (x4)</h3>
           <img src="img/portavasos.jpg" alt="Portavasos">
           <p>$18.000 COP</p>
         </div>
-        <div class="producto fade-in">
+        <div class="producto">
           <h3>Soporte de Audífonos</h3>
           <img src="img/soporte_audifonos.jpg" alt="Soporte de audífonos">
           <p>$28.000 COP</p>
@@ -45,23 +47,23 @@
 
     <section id="decorativos" class="categoria">
       <h2>Decorativos en Madera</h2>
-      <div class="grid">
-        <div class="producto fade-in">
+      <div class="fila-productos">
+        <div class="producto" onclick="irADetalle('5')">
           <h3>Mini Escultura de Animal</h3>
           <img src="img/mini_escultura.jpg" alt="Escultura animal">
           <p>$27.000 COP</p>
         </div>
-        <div class="producto fade-in">
+        <div class="producto" onclick="irADetalle('6')">
           <h3>Placa con Frase</h3>
           <img src="img/placa_frase.jpg" alt="Placa decorativa">
           <p>$22.000 COP</p>
         </div>
-        <div class="producto fade-in">
+        <div class="producto">
           <h3>Mapa de Ciudad</h3>
           <img src="img/mapa_ciudad.jpg" alt="Mapa de madera">
           <p>$35.000 COP</p>
         </div>
-        <div class="producto fade-in">
+        <div class="producto">
           <h3>Joyería Minimalista</h3>
           <img src="img/joyeria_madera.jpg" alt="Joyería de madera">
           <p>$20.000 COP</p>

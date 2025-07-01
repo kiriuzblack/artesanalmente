@@ -100,3 +100,33 @@ footer {
 .oculto {
   display: none;
 }
+.categoria {
+  display: none;
+  padding: 2rem;
+}
+
+.categoria.activa {
+  display: block;
+}
+
+.fila-productos {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 1.5rem;
+}
+
+.producto {
+  min-width: 220px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.producto:hover {
+  transform: scale(1.03);
+}

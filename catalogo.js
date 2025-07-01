@@ -75,3 +75,11 @@ document.addEventListener("DOMContentLoaded", () => {
   cargarProductos(utilitarios, "utilitarios");
   cargarProductos(decorativos, "decorativos");
 });
+function mostrarCategoria(id) {
+  document.querySelectorAll('.categoria').forEach(cat => cat.classList.remove('activa'));
+  document.getElementById(id).classList.add('activa');
+}
+
+function irADetalle(id) {
+  window.location.href = `detalle.html?id=${id}`;
+}
