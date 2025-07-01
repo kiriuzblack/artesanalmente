@@ -1,55 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Catálogo - Artesanalmente</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo Artesanalmente</title>
+  <link rel="stylesheet" href="catalogo.css">
+  <script defer src="catalogo.js"></script>
 </head>
 <body>
   <header>
-    <div class="logo">🪵 Artesanalmente</div>
+    <h1>Catálogo Artesanalmente</h1>
     <nav>
-      <a href="index.html">Inicio</a>
       <a href="#utilitarios">Utilitarios</a>
       <a href="#decorativos">Decorativos</a>
     </nav>
   </header>
 
   <main>
-    <section class="productos animado" id="utilitarios">
-      <h2>Utilitarios</h2>
-      <div class="galeria">
-        <!-- Reemplaza con imágenes reales -->
-        <div class="item animado">
-          <img src="https://via.placeholder.com/200" alt="Banco de madera" />
-          <h3>Banco de madera</h3>
-          <p>$349.99</p>
-          <button>Agregar al carrito</button>
+    <section id="utilitarios" class="categoria">
+      <h2>Utilitarios en Madera</h2>
+      <div class="grid">
+        <div class="producto fade-in">
+          <h3>Soporte para Celular</h3>
+          <img src="img/soporte_celular.jpg" alt="Soporte para celular">
+          <p>$25.000 COP</p>
         </div>
-        <div class="item animado">
-          <img src="https://via.placeholder.com/200" alt="Estantería rústica" />
-          <h3>Estantería rústica</h3>
-          <p>$899.99</p>
-          <button>Agregar al carrito</button>
+        <div class="producto fade-in">
+          <h3>Organizador de Escritorio</h3>
+          <img src="img/organizador_escritorio.jpg" alt="Organizador">
+          <p>$32.000 COP</p>
+        </div>
+        <div class="producto fade-in">
+          <h3>Portavasos Grabado (x4)</h3>
+          <img src="img/portavasos.jpg" alt="Portavasos">
+          <p>$18.000 COP</p>
+        </div>
+        <div class="producto fade-in">
+          <h3>Soporte de Audífonos</h3>
+          <img src="img/soporte_audifonos.jpg" alt="Soporte de audífonos">
+          <p>$28.000 COP</p>
         </div>
       </div>
     </section>
 
-    <section class="productos animado" id="decorativos">
-      <h2>Decorativos</h2>
-      <div class="galeria">
-        <div class="item animado">
-          <img src="https://via.placeholder.com/200" alt="Figura tallada" />
-          <h3>Figura tallada</h3>
-          <p>$199.99</p>
-          <button>Agregar al carrito</button>
+    <section id="decorativos" class="categoria">
+      <h2>Decorativos en Madera</h2>
+      <div class="grid">
+        <div class="producto fade-in">
+          <h3>Mini Escultura de Animal</h3>
+          <img src="img/mini_escultura.jpg" alt="Escultura animal">
+          <p>$27.000 COP</p>
         </div>
-        <div class="item animado">
-          <img src="https://via.placeholder.com/200" alt="Portavelas" />
-          <h3>Portavelas artesanal</h3>
-          <p>$99.99</p>
-          <button>Agregar al carrito</button>
+        <div class="producto fade-in">
+          <h3>Placa con Frase</h3>
+          <img src="img/placa_frase.jpg" alt="Placa decorativa">
+          <p>$22.000 COP</p>
+        </div>
+        <div class="producto fade-in">
+          <h3>Mapa de Ciudad</h3>
+          <img src="img/mapa_ciudad.jpg" alt="Mapa de madera">
+          <p>$35.000 COP</p>
+        </div>
+        <div class="producto fade-in">
+          <h3>Joyería Minimalista</h3>
+          <img src="img/joyeria_madera.jpg" alt="Joyería de madera">
+          <p>$20.000 COP</p>
         </div>
       </div>
     </section>
@@ -58,7 +73,5 @@
   <footer>
     <p>&copy; 2025 Artesanalmente. Todos los derechos reservados.</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
